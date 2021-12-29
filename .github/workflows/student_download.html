@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<script>
+		function b()
+        {
+			var x=document.getElementById('degree');
+			var y=x.options[x.selectedIndex].value;
+            if(y == 'BT' )
+			{
+                document.getElementById('bt').style.visibility='visible';
+				document.getElementById('co').style.visibility='visible';
+				document.getElementById('mt').style.visibility='hidden';
+				document.getElementById('co2').style.visibility='hidden';
+            }
+            if(y == 'MT')
+            {
+				document.getElementById('bt').style.visibility='hidden';
+				document.getElementById('co').style.visibility='hidden';
+				document.getElementById('mt').style.visibility='visible';
+				document.getElementById('co2').style.visibility='visible';
+            }
+        }
+			
+		</script>
+	</head>	
+	<body bgcolor="#FF6347">
+		<div style="padding: 350px;"><form action="student_download.php" method="post" style="width:515px; height=200px; padding:50px;background-color: #EEE8AA;" border="1"><u><center><h1 >Exam Papers Searching</h1></center></u><br><br>
+			
+			
+			<h3>Select Degree:</h3><select style="border-color: aqua; border-width:2px; border-radius:7px; margin-right:20px;" onchange="b()" id="degree">			
+								<option value="BT" >B.Tech</option>
+								<option value="MT">M.Tech</option>			
+								<option value="MT">MBA</option>					
+				</select><br>
+			
+			
+				<h3>Select Department:</h3><select style="border-color: aqua;border-radius:7px;margin-right:20px;visibility: hidden;" id="co" onchange="b()">
+						<option >IT</option>
+						<option>CSE</option>			
+						<option>ECE</option>			
+						<option>MEC</option>
+						<option>CIVIL</option>			
+						<option>EEE</option>
+				</select>
+		
+				<select style="border-color: aqua;border-radius:7px;visibility: hidden;" id="co2" onchange="b()">
+						<option >IT</option>
+						<option>CSE</option>			
+					
+				</select>
+				
+			<br>
+			
+			<pr><h3>Select Regulation :</h3>
+							  R15<input type="checkbox" id="r15" value="R15">
+							  R16<input type="checkbox" id="r16" value="R16">
+							  R17<input type="checkbox" id="r17x" value="R17">
+							  R18<input type="checkbox" id="r18" value="R18">
+							  R19<input type="checkbox" id="r19" value="R19">
+							  R20<input type="checkbox" id="r20" value="R20">
+			</pr><br><br>
+			
+			
+			<h3>Select Semister:</h3><select style="border-color: aqua; border-width:2px;border-radius:7px;" id="bt">
+											<option>1</option>
+											<option>2</option>			
+											<option>3</option>			
+											<option>4</option>
+											<option>5</option>			
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+									</select>
+				
+				
+				<select style="visibility: hidden; border-color: aqua; border-width:2px;border-radius:7px;" id="mt">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+
+				</select><br><br>
+				
+				
+			
+			<h3>Select Type of Exam:</h3> External<input type="checkbox" id="ex" checked>
+			Supply<input type="checkbox" id="ex" /><br><br>
+			
+			<input type="submit" value="Search" style="border-radius: 10px; border-color: aqua; background-color:whitesmoke; width: 70px; height: 25px" />
+					<br><br>
+			
+						<center><h3>OR</h3></center><br>
+			
+			<h4>Enter Subject Name:</h4><input type="text" name="sname" size="100px" style="border-radius: 10px; color: darkgoldenrod; border-color: aqua; height: 29px; border-width:2px; width: 350px;" placeholder="search exam papers"><br><br>
+					
+			<input type="submit" value="Search" name="b1" style="border-radius: 10px; border-color: aqua; background-color:whitesmoke; width: 70px; height: 25px" />
+					<br><br></pr>
+			
+						<center><h3>OR</h3></center><br>
+			
+			
+			<h4>Enter Subject Code:</h4><input type="text" size="100px" name="scode" style="border-radius: 10px; background-color: whitesmoke;border-color: aqua; height: 29px; border-width:2px; width: 350px;" placeholder="Enter subect code for exam papers"><br><br>
+			
+			<input type="submit" value="search" name="b2" style="border-radius: 10px; border-color: aqua; background-color:whitesmoke; width: 70px; height: 25px" />
+					<br><br>
+			
+			</form></div>
+	
+	</body></html>
