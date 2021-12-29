@@ -1,0 +1,103 @@
+<html>
+	
+	<script>
+		function b()
+        {
+			var x=document.getElementById('degree');
+			var y=x.options[x.selectedIndex].value;
+            if(y == 'BT' )
+			{
+                document.getElementById('bt').style.visibility='visible';
+				document.getElementById('co').style.visibility='visible';
+				document.getElementById('mt').style.visibility='hidden';
+				document.getElementById('co2').style.visibility='hidden';
+            }
+            if(y == 'MT')
+            {
+				document.getElementById('bt').style.visibility='hidden';
+				document.getElementById('co').style.visibility='hidden';
+				document.getElementById('mt').style.visibility='visible';
+				document.getElementById('co2').style.visibility='visible';
+            }
+        }
+			
+		</script>
+	
+
+	<body bgcolor='#40E0D0'><div style="padding: 350px;">
+	<form style="width:520px; height=500px; padding:50px; background-color: #EEE8AA; align: center;" enctype="multipart/form-data" method="POST" action="project_form_uploading_Database.php">
+		<u><center><h1 >Exam Papers Uploading</h1></center></u><br><br>
+		<h3>Select Degree:</h3><select class="c" onchange="b()" id="degree" style="border-color: aqua; border-width:2px;border-radius:7px;">			
+								<option value="BT" >B.Tech</option>
+								<option value="MT">M.Tech</option>			
+								<option value="MT">MBA</option>					
+								</select><br>
+			
+				<h3>Select Department:</h3><select class="c" id="co" onchange="b()" style="border-color: aqua; border-width:2px;border-radius:7px;">
+						<option >IT</option>
+						<option>CSE</option>			
+						<option>ECE</option>			
+						<option>MEC</option>
+						<option>CIVIL</option>			
+						<option>EEE</option>
+				</select>
+		
+				<select style="border-color: aqua;border-radius:7px;visibility: hidden;" id="co2" onchange="b()">
+						<option >IT</option>
+						<option>CSE</option>			
+					
+				</select>
+				
+			<br>
+			
+			<pr><h3>Select Regulation :</h3>
+							  R15<input type="checkbox" id="r" value="R15">
+							  R16<input type="checkbox" id="r" value="R16">
+							  R17<input type="checkbox" id="r" value="R17">
+							  R18<input type="checkbox" id="r" value="R18">
+							  R19<input type="checkbox" id="r" value="R19">
+							  R20<input type="checkbox" id="r" value="R20">
+			</pr><br><br>
+			
+			
+			<pr><h3>Select Semister:</h3><select style="border-color: aqua; border-width:2px;border-radius:7px;" id="bt">
+											<option>1</option>
+											<option>2</option>			
+											<option>3</option>			
+											<option>4</option>
+											<option>5</option>			
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+									</select>
+				
+				
+				<select style="visibility: hidden; border-color: aqua; border-width:2px;border-radius:7px;" id="mt">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+
+				</select><br><br></pr>
+				
+				
+			
+		<h3>Select Type of Exam:</h3> External<input type="checkbox" id="ex" checked>
+										Supply<input type="checkbox" id="ex" /><br><br>			
+		
+			
+		<pr><h4>Enter Subject Name:</h4><input type="text" size="100px" style="border-radius: 15px; color: darkgoldenrod; border-color: aqua; height: 29px; border-width:2px; width: 350px;" id="sname"  placeholder="Enter subject name "><br><br>
+					
+			
+			
+		<h4>Enter Subject Code:</h4><input type="text" size="100px" style="border-radius: 15px; color: darkgoldenrod; border-color: aqua; height: 29px; border-width:2px; width: 350px;" id="scode" placeholder="Enter subect code "><br><br>
+			
+		
+			
+		<h3>Upload file:</h3> <input type="file" name="userfile" id="pdf" ><br><br><br>
+
+			<center><input type="submit" value="Upload" id="up" style="border-radius: 5px; border-color: aqua; background-color:whitesmoke; width: 100px; height: 25px" /></center>
+			
+			</form>
+	</body>
+</html>
